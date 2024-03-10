@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: black;
+}
+
+.main {
+  background-image: url(Images/Bg.jpg);
+  background-position: center center;
+  /* for zoom in effect -- max(shift, space) */
+  background-size: max(1200px, 100vw);
+
+  background-repeat: no-repeat;
+  height: 644px;
+  position: relative;
+}
+/* for a blur black bg on main bg image */
+/* dummy box - to show the text */
+.main .box {
+  height: 644px;
+  width: 100%;
+  opacity: 0.69;
+
+  position: absolute;
+  top: 0;
+
+  background-color: black;
+}
+
+nav {
+  max-width: 60vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}
+
+nav img {
+  color: red;
+  width: 130px;
+  /* samne img ta anar jonno */
+  position: relative;
+  z-index: 10;
+}
+
+nav button {
+  position: relative;
+  z-index: 10;
+}
+
+.hero {
+  font-family: "Martel Sans", sans-serif;
+  /* as parent of this div is set so we can set the height of this in percentage */
+  /* nav er height minus korlam nicher grey line er kache ante + responsive hoye jabe */
+  height: calc(100% - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  /* to pop out the text */
+  position: relative;
+  gap: 23px;
+  /* for making responsive */
+  padding: 0 30px;
+}
+/* hero div er 1st span */
+/* hero> = means immediate nth child er opor only apply hobe */
+.hero> :nth-child(1){
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 48px;
+    text-align: center;
+}
+.hero> :nth-child(2){
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+}
+.hero> :nth-child(3){
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.separation{
+  height: 7px;
+  background-color: rgb(46, 44, 44);
+  position: relative;
+  z-index: 20;
+}
+
+.btn{
+  padding: 3px 8px;
+  font-weight: 400;
+  color: white;
+  background-color: rgba(248, 243, 243, 0.021);
+  border: 1px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-red{
+  background-color: red;
+  color: white;
+  padding: 3px 24px;
+  font-size: 20px;
+  border-radius: 4px;
+  font-weight: 400;
+}
+.btn-red-sm{
+  background-color: red;
+  color: white;
+}
+
+.hero-buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.main input{
+  padding: 7px 101px 8px 14px;
+  color: white;
+  font-size: 12px;
+  border-radius: 4px;
+  background-color: rgba(23, 23, 23, 0.7);
+  border: 1px solid rgba(246, 238, 238, 0.5);
+}
+
+
+.first{
+  display: flex;
+  justify-content: center;
+  max-width: 70vw;
+  margin: auto;
+  color: white;
+  align-items: center;
+}
+
+.secImg{
+  position: relative;
+}
+.secImg img{
+  /* top: 8px;
+  bottom: 100px; */
+  width: 555px;
+  /* image e video ta adjust korte */
+  position: relative;
+  z-index: 10;
+}
+.secImg video{
+  position: absolute;
+  /* top: 51px;
+  right: 0;
+  width: 555px; */
+  top: 73px;
+  right: 0;
+  width: 363px;
+  left: 16%;
+}
+
+section.first > div{
+  display: flex;
+  flex-direction: column;
+  padding: 34px 0;
+}
+section.first > div :first-child{
+  font-size: 48px;
+  font-weight: bolder;
+}
+section.first > div :nth-child(2){
+  font-size: 24px;
+}
+
+
+/* section.third > div :nth-child(1){
+  width: 32vw;
+}
+section.third > div :nth-child(2){
+  width: 20vw;
+  left: 17%;
+} */
+
+.faq{
+  background-color: black;
+  color: white;
+  padding: 34px;
+}
+.faq h2{
+  text-align: center;
+  font-size: 48px;
+}
+.faqbox{
+  transition: all 1s ease-out;
+  display: flex;
+  justify-content: space-between;
+  background-color: #2d2d2d;
+  padding: 24px;
+  max-width: 60vw;
+  margin: 34px auto;
+  cursor: pointer;
+  font-size: 24px;
+}
+/* make all plus sign white */
+/* another method= make stroke white in html code svg te */
+.faqbox svg{
+  filter: invert(1);
+}
+.faqbox:hover{
+  background-color: #414141;
+  color: white;
+}
+
+/* The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning. */
+/* A grid layout consists of a parent element, with one or more child elements. */
+/* grid-template-columns = Specifies the size of the columns, and how many columns in a grid layout */
+/* 1fr = one fraction = 25% or 1/4 */
+
+footer{
+  color: white;
+  max-width: 60vw;
+  margin: auto;
+  padding: 60px;
+}
+.footer-ele{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  color: white;
+}
+
+.footer-ele a{
+  color: white;
+  font-size: 14px;
+}
+footer .questions{
+  padding: 34px 0;
+}
+.footer-item{
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+
+@media screen and (max-width: 1300px){
+  .footer-ele{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+}
+
+@media screen and (max-width: 1300px){
+  nav{
+    max-width: 90vw;
+  }
+  .first{
+    flex-wrap: wrap;
+  }
+
+  .secImg img{
+    width: 305px;
+  }
+
+  .secImg video{
+    width: 187px;
+  }
+
+  .hero> :nth-child(1){
+    font-size: 32px;
+  }
+
+  .hero> :nth-child(2){
+    font-size: 18px;
+  }
+
+  .hero> :nth-child(3){
+    font-size: 18px;
+  }
+
+  .hero-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .faq h2{
+    text-align: center;
+    font-size: 32px;
+  }
+
+  footer{
+    max-width: 90vw;
+    padding: 75px 0;
+  }
+
+  .footer-item{
+    align-items: center;
+  }
+}
